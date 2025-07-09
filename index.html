@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pack Opening Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Pokémon Pack Opening Game</h1>
+      <div class="stats">
+        <p>💰 Coins: <span id="coins">500</span></p>
+        <p>📈 Total Value: <span id="totalValue">0</span></p>
+      </div>
+      <button id="openPackBtn">Open Pack (100 Coins)</button>
+      <div class="pack-container" id="packContainer"></div>
+      <button id="viewCollectionBtn">View Collection</button>
+      <button id="viewAchievementsBtn">Achievements</button>
+    </div>
+
+    <div
+      class="achievements-container"
+      id="achievementsModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="achievementsTitle"
+      tabindex="-1"
+      style="display: none"
+    >
+      <div class="achievements-content" role="document">
+        <button id="closeAchievementsBtn" aria-label="Close Achievements">
+          &times;
+        </button>
+        <h2 id="achievementsTitle">Achievements Overview</h2>
+        <ul id="achievementsList" tabindex="0"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

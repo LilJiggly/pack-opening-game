@@ -1,0 +1,79 @@
+[
+  {
+    "id": "001",
+    "name": "Bulbasaur",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/001.png"
+  },
+  {
+    "id": "002",
+    "name": "Ivysaur",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/002.png"
+  },
+  {
+    "id": "003",
+    "name": "Venasaur",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/003.png"
+  },
+  {
+    "id": "004",
+    "name": "Charmander",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/004.png"
+  },
+  {
+    "id": "007",
+    "name": "Squirtle",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/007.png"
+  },
+  {
+    "id": "025",
+    "name": "Pikachu",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/025.png"
+  },
+  {
+    "id": "037",
+    "name": "Vulpix",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/037.png"
+  },
+  {
+    "id": "058",
+    "name": "Growlithe",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/058.png"
+  },
+  {
+    "id": "130",
+    "name": "Gyarados",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/130.png"
+  },
+  {
+    "id": "143",
+    "name": "Snorlax",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/143.png"
+  },
+  {
+    "id": "149",
+    "name": "Dragonite",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/149.png"
+  }
+]
