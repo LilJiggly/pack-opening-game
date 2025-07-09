@@ -15,9 +15,9 @@
   },
   {
     "id": "003",
-    "name": "Venasaur",
-    "rarity": "common",
-    "value": 10,
+    "name": "Venusaur",
+    "rarity": "rare",
+    "value": 100,
     "image": "images/003.png"
   },
   {
@@ -28,11 +28,144 @@
     "image": "images/004.png"
   },
   {
+    "id": "005",
+    "name": "Charmeleon",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/005.png"
+  },
+  {
+    "id": "006",
+    "name": "Charizard",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/006.png"
+  },
+  {
     "id": "007",
     "name": "Squirtle",
     "rarity": "common",
     "value": 10,
     "image": "images/007.png"
+  },
+  {
+    "id": "008",
+    "name": "Wartortle",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/008.png"
+  },
+  {
+    "id": "009",
+    "name": "Blastoise",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/009.png"
+  },
+  {
+    "id": "010",
+    "name": "Caterpie",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/010.png"
+  },
+  {
+    "id": "011",
+    "name": "Metapod",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/011.png"
+  },
+  {
+    "id": "012",
+    "name": "Butterfree",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/012.png"
+  },
+  {
+    "id": "013",
+    "name": "Weedle",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/013.png"
+  },
+  {
+    "id": "014",
+    "name": "Kakuna",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/014.png"
+  },
+  {
+    "id": "015",
+    "name": "Beedrill",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/015.png"
+  },
+  {
+    "id": "016",
+    "name": "Pidgey",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/016.png"
+  },
+  {
+    "id": "017",
+    "name": "Pidgeotto",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/017.png"
+  },
+  {
+    "id": "018",
+    "name": "Pidgeot",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/018.png"
+  },
+  {
+    "id": "019",
+    "name": "Rattata",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/019.png"
+  },
+  {
+    "id": "020",
+    "name": "Raticate",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/020.png"
+  },
+  {
+    "id": "021",
+    "name": "Spearow",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/021.png"
+  },
+  {
+    "id": "022",
+    "name": "Fearow",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/022.png"
+  },
+  {
+    "id": "023",
+    "name": "Ekans",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/023.png"
+  },
+  {
+    "id": "024",
+    "name": "Arbok",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/024.png"
   },
   {
     "id": "025",
@@ -42,32 +175,865 @@
     "image": "images/025.png"
   },
   {
-    "id": "037",
-    "name": "Vulpix",
+    "id": "026",
+    "name": "Raichu",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/026.png"
+  },
+  {
+    "id": "027",
+    "name": "Sandshrew",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/027.png"
+  },
+  {
+    "id": "028",
+    "name": "Sandslash",
     "rarity": "uncommon",
     "value": 30,
+    "image": "images/028.png"
+  },
+  {
+    "id": "029",
+    "name": "Nidoran♀",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/029.png"
+  },
+  {
+    "id": "030",
+    "name": "Nidorina",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/030.png"
+  },
+  {
+    "id": "031",
+    "name": "Nidoqueen",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/031.png"
+  },
+  {
+    "id": "032",
+    "name": "Nidoran♂",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/032.png"
+  },
+  {
+    "id": "033",
+    "name": "Nidorino",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/033.png"
+  },
+  {
+    "id": "034",
+    "name": "Nidoking",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/034.png"
+  },
+  {
+    "id": "035",
+    "name": "Clefairy",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/035.png"
+  },
+  {
+    "id": "036",
+    "name": "Clefable",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/036.png"
+  },
+  {
+    "id": "037",
+    "name": "Vulpix",
+    "rarity": "common",
+    "value": 10,
     "image": "images/037.png"
+  },
+  {
+    "id": "038",
+    "name": "Ninetales",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/038.png"
+  },
+  {
+    "id": "039",
+    "name": "Jigglypuff",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/039.png"
+  },
+  {
+    "id": "040",
+    "name": "Wigglytuff",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/040.png"
+  },
+  {
+    "id": "041",
+    "name": "Zubat",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/041.png"
+  },
+  {
+    "id": "042",
+    "name": "Golbat",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/042.png"
+  },
+  {
+    "id": "043",
+    "name": "Oddish",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/043.png"
+  },
+  {
+    "id": "044",
+    "name": "Gloom",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/044.png"
+  },
+  {
+    "id": "045",
+    "name": "Vileplume",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/045.png"
+  },
+  {
+    "id": "046",
+    "name": "Paras",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/046.png"
+  },
+  {
+    "id": "047",
+    "name": "Parasect",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/047.png"
+  },
+  {
+    "id": "048",
+    "name": "Venonat",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/048.png"
+  },
+  {
+    "id": "049",
+    "name": "Venomoth",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/049.png"
+  },
+  {
+    "id": "050",
+    "name": "Diglett",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/050.png"
+  },
+  {
+    "id": "051",
+    "name": "Dugtrio",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/051.png"
+  },
+  {
+    "id": "052",
+    "name": "Meowth",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/052.png"
+  },
+  {
+    "id": "053",
+    "name": "Persian",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/053.png"
+  },
+  {
+    "id": "054",
+    "name": "Psyduck",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/054.png"
+  },
+  {
+    "id": "055",
+    "name": "Golduck",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/055.png"
+  },
+  {
+    "id": "056",
+    "name": "Mankey",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/056.png"
+  },
+  {
+    "id": "057",
+    "name": "Primeape",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/057.png"
   },
   {
     "id": "058",
     "name": "Growlithe",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/058.png"
+  },
+  {
+    "id": "059",
+    "name": "Arcanine",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/059.png"
+  },
+  {
+    "id": "060",
+    "name": "Poliwag",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/060.png"
+  },
+  {
+    "id": "061",
+    "name": "Poliwhirl",
     "rarity": "uncommon",
     "value": 30,
-    "image": "images/058.png"
+    "image": "images/061.png"
+  },
+  {
+    "id": "062",
+    "name": "Poliwrath",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/062.png"
+  },
+  {
+    "id": "063",
+    "name": "Abra",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/063.png"
+  },
+  {
+    "id": "064",
+    "name": "Kadabra",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/064.png"
+  },
+  {
+    "id": "065",
+    "name": "Alakazam",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/065.png"
+  },
+  {
+    "id": "066",
+    "name": "Machop",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/066.png"
+  },
+  {
+    "id": "067",
+    "name": "Machoke",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/067.png"
+  },
+  {
+    "id": "068",
+    "name": "Machamp",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/068.png"
+  },
+  {
+    "id": "069",
+    "name": "Bellsprout",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/069.png"
+  },
+  {
+    "id": "070",
+    "name": "Weepinbell",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/070.png"
+  },
+  {
+    "id": "071",
+    "name": "Victreebel",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/071.png"
+  },
+  {
+    "id": "072",
+    "name": "Tentacool",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/072.png"
+  },
+  {
+    "id": "073",
+    "name": "Tentacruel",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/073.png"
+  },
+  {
+    "id": "074",
+    "name": "Geodude",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/074.png"
+  },
+  {
+    "id": "075",
+    "name": "Graveler",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/075.png"
+  },
+  {
+    "id": "076",
+    "name": "Golem",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/076.png"
+  },
+  {
+    "id": "077",
+    "name": "Ponyta",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/077.png"
+  },
+  {
+    "id": "078",
+    "name": "Rapidash",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/078.png"
+  },
+  {
+    "id": "079",
+    "name": "Slowpoke",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/079.png"
+  },
+  {
+    "id": "080",
+    "name": "Slowbro",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/080.png"
+  },
+  {
+    "id": "081",
+    "name": "Magnemite",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/081.png"
+  },
+  {
+    "id": "082",
+    "name": "Magneton",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/082.png"
+  },
+  {
+    "id": "083",
+    "name": "Farfetch’d",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/083.png"
+  },
+  {
+    "id": "084",
+    "name": "Doduo",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/084.png"
+  },
+  {
+    "id": "085",
+    "name": "Dodrio",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/085.png"
+  },
+  {
+    "id": "086",
+    "name": "Seel",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/086.png"
+  },
+  {
+    "id": "087",
+    "name": "Dewgong",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/087.png"
+  },
+  {
+    "id": "088",
+    "name": "Grimer",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/088.png"
+  },
+  {
+    "id": "089",
+    "name": "Muk",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/089.png"
+  },
+  {
+    "id": "090",
+    "name": "Shellder",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/090.png"
+  },
+  {
+    "id": "091",
+    "name": "Cloyster",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/091.png"
+  },
+  {
+    "id": "092",
+    "name": "Gastly",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/092.png"
+  },
+  {
+    "id": "093",
+    "name": "Haunter",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/093.png"
+  },
+  {
+    "id": "094",
+    "name": "Gengar",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/094.png"
+  },
+  {
+    "id": "095",
+    "name": "Onix",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/095.png"
+  },
+  {
+    "id": "096",
+    "name": "Drowzee",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/096.png"
+  },
+  {
+    "id": "097",
+    "name": "Hypno",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/097.png"
+  },
+  {
+    "id": "098",
+    "name": "Krabby",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/098.png"
+  },
+  {
+    "id": "099",
+    "name": "Kingler",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/099.png"
+  },
+  {
+    "id": "100",
+    "name": "Voltorb",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/100.png"
+  },
+  {
+    "id": "101",
+    "name": "Electrode",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/101.png"
+  },
+  {
+    "id": "102",
+    "name": "Exeggcute",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/102.png"
+  },
+  {
+    "id": "103",
+    "name": "Exeggutor",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/103.png"
+  },
+  {
+    "id": "104",
+    "name": "Cubone",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/104.png"
+  },
+  {
+    "id": "105",
+    "name": "Marowak",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/105.png"
+  },
+  {
+    "id": "106",
+    "name": "Hitmonlee",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/106.png"
+  },
+  {
+    "id": "107",
+    "name": "Hitmonchan",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/107.png"
+  },
+  {
+    "id": "108",
+    "name": "Lickitung",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/108.png"
+  },
+  {
+    "id": "109",
+    "name": "Koffing",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/109.png"
+  },
+  {
+    "id": "110",
+    "name": "Weezing",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/110.png"
+  },
+  {
+    "id": "111",
+    "name": "Rhyhorn",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/111.png"
+  },
+  {
+    "id": "112",
+    "name": "Rhydon",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/112.png"
+  },
+  {
+    "id": "113",
+    "name": "Chansey",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/113.png"
+  },
+  {
+    "id": "114",
+    "name": "Tangela",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/114.png"
+  },
+  {
+    "id": "115",
+    "name": "Kangaskhan",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/115.png"
+  },
+  {
+    "id": "116",
+    "name": "Horsea",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/116.png"
+  },
+  {
+    "id": "117",
+    "name": "Seadra",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/117.png"
+  },
+  {
+    "id": "118",
+    "name": "Goldeen",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/118.png"
+  },
+  {
+    "id": "119",
+    "name": "Seaking",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/119.png"
+  },
+  {
+    "id": "120",
+    "name": "Staryu",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/120.png"
+  },
+  {
+    "id": "121",
+    "name": "Starmie",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/121.png"
+  },
+  {
+    "id": "122",
+    "name": "Mr. Mime",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/122.png"
+  },
+  {
+    "id": "123",
+    "name": "Scyther",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/123.png"
+  },
+  {
+    "id": "124",
+    "name": "Jynx",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/124.png"
+  },
+  {
+    "id": "125",
+    "name": "Electabuzz",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/125.png"
+  },
+  {
+    "id": "126",
+    "name": "Magmar",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/126.png"
+  },
+  {
+    "id": "127",
+    "name": "Pinsir",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/127.png"
+  },
+  {
+    "id": "128",
+    "name": "Tauros",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/128.png"
+  },
+  {
+    "id": "129",
+    "name": "Magikarp",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/129.png"
   },
   {
     "id": "130",
     "name": "Gyarados",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/130.png"
+  },
+  {
+    "id": "131",
+    "name": "Lapras",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/131.png"
+  },
+  {
+    "id": "132",
+    "name": "Ditto",
     "rarity": "rare",
     "value": 100,
-    "image": "images/130.png"
+    "image": "images/132.png"
+  },
+  {
+    "id": "133",
+    "name": "Eevee",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/133.png"
+  },
+  {
+    "id": "134",
+    "name": "Vaporeon",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/134.png"
+  },
+  {
+    "id": "135",
+    "name": "Jolteon",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/135.png"
+  },
+  {
+    "id": "136",
+    "name": "Flareon",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/136.png"
+  },
+  {
+    "id": "137",
+    "name": "Porygon",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/137.png"
+  },
+  {
+    "id": "138",
+    "name": "Omanyte",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/138.png"
+  },
+  {
+    "id": "139",
+    "name": "Omastar",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/139.png"
+  },
+  {
+    "id": "140",
+    "name": "Kabuto",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/140.png"
+  },
+  {
+    "id": "141",
+    "name": "Kabutops",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/141.png"
+  },
+  {
+    "id": "142",
+    "name": "Aerodactyl",
+    "rarity": "rare",
+    "value": 100,
+    "image": "images/142.png"
   },
   {
     "id": "143",
     "name": "Snorlax",
-    "rarity": "rare",
-    "value": 100,
+    "rarity": "ultra-rare",
+    "value": 500,
     "image": "images/143.png"
+  },
+  {
+    "id": "144",
+    "name": "Articuno",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/144.png"
+  },
+  {
+    "id": "145",
+    "name": "Zapdos",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/145.png"
+  },
+  {
+    "id": "146",
+    "name": "Moltres",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/146.png"
+  },
+  {
+    "id": "147",
+    "name": "Dratini",
+    "rarity": "common",
+    "value": 10,
+    "image": "images/147.png"
+  },
+  {
+    "id": "148",
+    "name": "Dragonair",
+    "rarity": "uncommon",
+    "value": 30,
+    "image": "images/148.png"
   },
   {
     "id": "149",
@@ -75,5 +1041,19 @@
     "rarity": "ultra-rare",
     "value": 500,
     "image": "images/149.png"
+  },
+  {
+    "id": "150",
+    "name": "Mewtwo",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/150.png"
+  },
+  {
+    "id": "151",
+    "name": "Mew",
+    "rarity": "ultra-rare",
+    "value": 500,
+    "image": "images/151.png"
   }
 ]
