@@ -1045,14 +1045,14 @@
   {
     "id": "150",
     "name": "Mewtwo",
-    "rarity": "ultra-rare",
+    "rarity": "legendary",
     "value": 500,
     "image": "images/150.png"
   },
   {
     "id": "151",
     "name": "Mew",
-    "rarity": "ultra-rare",
+    "rarity": "mythical",
     "value": 500,
     "image": "images/151.png"
   }

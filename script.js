@@ -1,3 +1,219 @@
+// === CHEATS PANEL UI (Reliable, no fetch, hidden until Shift+P, click toggles panel) ===
+// === CHEATS PANEL UI (Reliable, no fetch, hidden until Shift+P, click toggles panel) ===
+// This block is run after DOMContentLoaded to avoid scope issues and ensure DOM is ready.
+document.addEventListener("DOMContentLoaded", function () {
+  // Ensure only one button/panel exists at all times
+  let toggleBtn = document.getElementById("toggleCheatsBtn");
+  if (toggleBtn) {
+    // Remove old panel if exists
+    const oldPanel = document.getElementById("cheatsPanel");
+    if (oldPanel) oldPanel.remove();
+    // Remove all event listeners by replacing node
+    const newBtn = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+    toggleBtn = newBtn;
+    toggleBtn.style.display = "none";
+    toggleBtn.setAttribute("tabindex", "-1");
+  } else {
+    // Create toggle button
+    toggleBtn = document.createElement("button");
+    toggleBtn.id = "toggleCheatsBtn";
+    toggleBtn.textContent = "Cheats";
+    toggleBtn.setAttribute("aria-label", "Open Cheats Panel");
+    toggleBtn.className = "cheats-btn-toggle";
+    toggleBtn.setAttribute("tabindex", "-1");
+    document.body.appendChild(toggleBtn);
+  }
+
+  let panel = null;
+  let cheatBtnRevealed = false;
+
+  // --- Create cheats panel in JS (no fetch) ---
+  function ensureCheatsPanel() {
+    // Remove any existing panel before creating new
+    const existing = document.getElementById("cheatsPanel");
+    if (existing) {
+      panel = existing;
+      return;
+    }
+    panel = document.createElement("div");
+    panel.id = "cheatsPanel";
+
+    panel.style.left = "30px";
+    panel.style.zIndex = "10000";
+    panel.style.background = "rgba(30,30,30,0.98)";
+    panel.style.border = "2px solid #222";
+    panel.style.borderRadius = "10px";
+    panel.style.padding = "20px 18px 16px 18px";
+    panel.style.minWidth = "220px";
+    panel.style.boxShadow = "0 8px 32px rgba(0,0,0,0.35)";
+
+    panel.className = "cheats-panel";
+    panel.setAttribute("tabindex", "0");
+    panel.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <span style="font-size:1.2em;font-weight:bold;">Cheats Panel</span>
+        <button id="closeCheatsPanelBtn" aria-label="Close Cheats Panel" style="font-size:1.2em;background:none;border:none;color:#fff;cursor:pointer;">&times;</button>
+      </div>
+      <button id="cheatInfiniteMoneyBtn" style="width:100%;margin-bottom:7px;">💰 Infinite Money</button>
+      <button id="cheatReceiveAllCardsBtn" style="width:100%;margin-bottom:7px;">🃏 Receive All Cards</button>
+      <button id="cheatResetGameBtn" style="width:100%;">♻️ Reset Game</button>
+      <div style="margin-top:12px;font-size:0.92em;opacity:0.7;">Shift+C: toggle panel<br>Shift+P: reveal button</div>
+    `;
+    document.body.appendChild(panel);
+
+    // Button references
+    const closeBtn = panel.querySelector("#closeCheatsPanelBtn");
+    const infiniteMoneyBtn = panel.querySelector("#cheatInfiniteMoneyBtn");
+    const receiveAllCardsBtn = panel.querySelector("#cheatReceiveAllCardsBtn");
+    const resetGameBtn = panel.querySelector("#cheatResetGameBtn");
+
+    // Hook up cheat buttons
+    infiniteMoneyBtn &&
+      infiniteMoneyBtn.addEventListener("click", () => {
+        if (
+          window.cheats &&
+          typeof window.cheats.infiniteMoney === "function"
+        ) {
+          window.cheats.infiniteMoney();
+          if (typeof showToast === "function")
+            showToast("Infinite Money activated!");
+          else console.log("Infinite Money activated!");
+        }
+      });
+    receiveAllCardsBtn &&
+      receiveAllCardsBtn.addEventListener("click", () => {
+        if (
+          window.cheats &&
+          typeof window.cheats.receiveAllCards === "function"
+        ) {
+          window.cheats.receiveAllCards();
+          if (typeof showToast === "function") showToast("All cards received!");
+          else console.log("All cards received!");
+        }
+      });
+    resetGameBtn &&
+      resetGameBtn.addEventListener("click", () => {
+        if (window.cheats && typeof window.cheats.resetGame === "function") {
+          window.cheats.resetGame();
+          if (typeof showToast === "function") showToast("Game reset!");
+          else console.log("Game reset!");
+        }
+      });
+
+    // Panel show/hide logic
+    function openPanel() {
+      panel.style.display = "block";
+      panel.focus && panel.focus();
+      toggleBtn.setAttribute("aria-expanded", "true");
+      if (typeof showToast === "function") showToast("Cheats panel opened.");
+      else console.log("Cheats panel opened.");
+      console.log("Cheats panel opened.");
+    }
+    function closePanel() {
+      panel.style.display = "none";
+      toggleBtn.setAttribute("aria-expanded", "false");
+      toggleBtn.focus && toggleBtn.focus();
+      if (typeof showToast === "function") showToast("Cheats panel closed.");
+      else console.log("Cheats panel closed.");
+      console.log("Cheats panel closed.");
+    }
+    // Close panel on close button
+    closeBtn && closeBtn.addEventListener("click", closePanel);
+    // Keyboard: Escape closes
+    panel.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closePanel();
+      }
+    });
+    // Clicking outside panel closes it
+    document.addEventListener("mousedown", function outsideCheatsPanel(e) {
+      if (
+        panel.style.display === "block" &&
+        !panel.contains(e.target) &&
+        e.target !== toggleBtn
+      ) {
+        closePanel();
+      }
+    });
+    // Shift+C toggles panel (except when input/textarea focused)
+    document.addEventListener("keydown", function cheatsPanelToggleKey(e) {
+      const active = document.activeElement;
+      const isInput =
+        active &&
+        (active.tagName === "INPUT" ||
+          active.tagName === "TEXTAREA" ||
+          active.isContentEditable);
+      if (e.shiftKey && (e.key === "C" || e.key === "c") && !isInput) {
+        if (panel.style.display === "block") {
+          closePanel();
+        } else {
+          openPanel();
+        }
+        e.preventDefault();
+        console.log("Shift+C pressed, toggling cheats panel.");
+      }
+    });
+    // Save for toggle logic
+    panel.__openPanel = openPanel;
+    panel.__closePanel = closePanel;
+  }
+
+  // Button hover effects (CSS handles most, but add fallback for opacity)
+  toggleBtn.addEventListener("mouseenter", () => {
+    toggleBtn.style.opacity = "1";
+  });
+  toggleBtn.addEventListener("mouseleave", () => {
+    toggleBtn.style.opacity = "0.85";
+  });
+
+  // Make button visible after Shift+P is pressed (and only then)
+  document.addEventListener("keydown", function revealCheatBtn(e) {
+    const active = document.activeElement;
+    const isInput =
+      active &&
+      (active.tagName === "INPUT" ||
+        active.tagName === "TEXTAREA" ||
+        active.isContentEditable);
+    if (
+      e.shiftKey &&
+      (e.key === "P" || e.key === "p") &&
+      !isInput &&
+      !cheatBtnRevealed
+    ) {
+      // Reveal the button
+      toggleBtn.style.display = "block";
+      toggleBtn.style.opacity = "0.85";
+      toggleBtn.style.pointerEvents = "";
+      toggleBtn.setAttribute("tabindex", "0");
+      cheatBtnRevealed = true;
+      setTimeout(() => toggleBtn.focus(), 50);
+      if (typeof showToast === "function") showToast("Cheats button revealed!");
+      else console.log("Cheats button revealed!");
+      console.log("Cheats button shown after Shift+P.");
+    }
+    if (e.shiftKey && (e.key === "P" || e.key === "p")) {
+      console.log("Shift+P pressed.");
+    }
+  });
+
+  // On click, load panel if needed, then toggle visibility
+  toggleBtn.addEventListener("click", () => {
+    console.log("Cheats button clicked.");
+    ensureCheatsPanel();
+    if (!panel) {
+      if (typeof showToast === "function")
+        showToast("Cheats panel failed to load.");
+      else console.log("Cheats panel failed to load.");
+      return;
+    }
+    if (panel.style.display === "block") {
+      panel.__closePanel && panel.__closePanel();
+    } else {
+      panel.__openPanel && panel.__openPanel();
+    }
+  });
+});
 // Clean, fully functional script.js for Pokémon Pack Opening Game with Collection Progress, Achievements, and Sell Duplicates
 
 const coinsEl = document.getElementById("coins");
@@ -66,16 +282,13 @@ document.body.appendChild(toastContainer);
 function showToast(message) {
   const toast = document.createElement("div");
   toast.textContent = message;
-  toast.style.background = "rgba(0,0,0,0.8)";
-  toast.style.color = "white";
-  toast.style.padding = "10px 15px";
+  toast.className = "toast-message";
   toast.style.marginTop = "10px";
   toast.style.borderRadius = "5px";
   toast.style.fontFamily = "Arial, sans-serif";
   toast.style.fontSize = "14px";
   toast.style.boxShadow = "0 0 5px rgba(0,0,0,0.5)";
   toast.style.opacity = "0";
-  toast.style.transition = "opacity 0.3s ease";
   toastContainer.appendChild(toast);
   requestAnimationFrame(() => {
     toast.style.opacity = "1";
@@ -112,16 +325,28 @@ function saveState() {
   localStorage.setItem("packsOpened", packsOpened);
 }
 
+// ---- CARD REVEAL: Flipping Animation ----
+// Adjust this constant for card reveal speed (ms between reveals)
+const CARD_REVEAL_DELAY = 150; // e.g. 100 = faster, 200 = slower
+
 function createCardElement(card, delay) {
   const cardEl = document.createElement("div");
   cardEl.className = "card";
   cardEl.style.boxShadow = rarityGlow[card.rarity];
-  cardEl.style.opacity = "0";
-  cardEl.style.transform = "scale(0.8)";
-  cardEl.style.transition = "opacity 0.3s ease, transform 0.3s ease";
 
+  // Flipping structure: .card > .card-inner > .card-front/.card-back
   const inner = document.createElement("div");
   inner.className = "card-inner";
+
+  // Card front (back of card shown before flip)
+  const front = document.createElement("div");
+  front.className = "card-front";
+  // Optionally, use a generic card back image or color
+  front.innerHTML = `<div class="card-back-design"></div>`;
+
+  // Card back (actual card content, revealed after flip)
+  const back = document.createElement("div");
+  back.className = "card-back";
 
   const name = document.createElement("div");
   name.className = "card-name";
@@ -142,16 +367,21 @@ function createCardElement(card, delay) {
   rarity.className = "card-rarity";
   rarity.textContent = `Rarity: ${card.rarity}`;
 
-  inner.appendChild(name);
-  inner.appendChild(image);
-  inner.appendChild(description);
-  inner.appendChild(rarity);
+  back.appendChild(name);
+  back.appendChild(image);
+  back.appendChild(description);
+  back.appendChild(rarity);
+
+  inner.appendChild(front);
+  inner.appendChild(back);
   cardEl.appendChild(inner);
 
-  // Animation reveal
+  // Initially, no flip
+  cardEl.classList.remove("flip");
+
+  // Animate flip after delay
   setTimeout(() => {
-    cardEl.style.opacity = "1";
-    cardEl.style.transform = "scale(1)";
+    cardEl.classList.add("flip");
   }, delay);
 
   return cardEl;
@@ -232,13 +462,40 @@ openPackBtn.addEventListener("click", () => {
   packContainer.innerHTML = "";
   let packValue = 0;
 
-  for (let i = 0; i < 7; i++) {
+  // Save original rarity chances for restoration
+  const originalRarityChances = {
+    "ultra-rare": rarityChances["ultra-rare"],
+    rare: rarityChances["rare"],
+    uncommon: rarityChances["uncommon"],
+    common: rarityChances["common"],
+  };
+
+  for (let i = 0; i < 8; i++) {
+    // For the 8th card, temporarily boost rarity chances
+    if (i === 7) {
+      rarityChances["ultra-rare"] = 4;
+      rarityChances["rare"] = 21;
+      rarityChances["uncommon"] = 25;
+      rarityChances["common"] = 50;
+    }
     const rarity = getRandomRarity();
+    // Log 8th card's rarity for easy testing
+    if (i === 7) {
+      console.log("[Pack Opening] 8th card rarity:", rarity);
+    }
     const card = getRandomCardByRarity(rarity);
-    const cardEl = createCardElement(card, i * 150);
+    // Use adjustable reveal delay and flipping animation
+    const cardEl = createCardElement(card, i * CARD_REVEAL_DELAY);
     updateCollection(card);
     packContainer.appendChild(cardEl);
     packValue += card.value || 0;
+    // Restore rarity chances after the 8th card
+    if (i === 7) {
+      rarityChances["ultra-rare"] = originalRarityChances["ultra-rare"];
+      rarityChances["rare"] = originalRarityChances["rare"];
+      rarityChances["uncommon"] = originalRarityChances["uncommon"];
+      rarityChances["common"] = originalRarityChances["common"];
+    }
   }
 
   totalValue += packValue;
@@ -406,6 +663,8 @@ function closeCollectionModal() {
 let selectedCardsToSell = new Set();
 
 const raritySellValue = {
+  mythical: 500,
+  legendary: 250,
   "ultra-rare": 100,
   rare: 50,
   uncommon: 20,
@@ -707,19 +966,92 @@ collectionModal.addEventListener("click", (e) => {
 // Keyboard accessibility: close modal on Escape
 // (Handled above with achievements modal keyboard listener)
 
-// Add simple CSS for selection highlight (for immediate testability)
-const style = document.createElement("style");
-style.textContent = `
-.collection-card.selected-for-sell {
-  outline: 3px solid #ff9800 !important;
-  box-shadow: 0 0 18px 6px #ff9800, var(--original-box-shadow, "");
-  position: relative;
-}
-.collection-card.selectable-for-sell:hover:not(.selected-for-sell) {
-  outline: 2px solid #ffd54f;
-}
-`;
-document.head.appendChild(style);
-
 // --- Final failsafe: Check on load and whenever coins change ---
 updateOpenPackButtonState();
+
+// === CHEATS.JS DEVELOPMENT INTEGRATION ===
+// Add dev cheats object to window for console use.
+// Safe for removal before production. For dev and Easter eggs.
+window.cheats = {
+  /**
+   * Set coins to Infinity for infinite money.
+   * Updates DOM and persists to localStorage.
+   */
+  infiniteMoney: function () {
+    coins = Infinity;
+    coinsEl.textContent = "∞";
+    localStorage.setItem("coins", "Infinity");
+    showToast && showToast("Cheat activated: Infinite Money!");
+    updateOpenPackButtonState && updateOpenPackButtonState();
+    return "Coins set to Infinity. Enjoy!";
+  },
+
+  /**
+   * Add all 151 cards (1 copy each) to the collection.
+   */
+  receiveAllCards: function () {
+    if (!Array.isArray(cards) || cards.length === 0) {
+      showToast && showToast("Cards are not loaded yet!");
+      return "Cards are not loaded yet!";
+    }
+    let collection = getCollection();
+    let newCount = 0;
+    cards.forEach((card) => {
+      if (!collection[card.id]) {
+        collection[card.id] = {
+          id: card.id,
+          name: card.name,
+          image: card.image,
+          rarity: card.rarity,
+          count: 1,
+          value: card.value || 0,
+        };
+        newCount++;
+      }
+    });
+    localStorage.setItem("collection", JSON.stringify(collection));
+    showToast && showToast(`Cheat: All cards received! (${newCount} added)`);
+    return `Added all cards (${newCount} new).`;
+  },
+
+  /**
+   * Reset game state: clears collection, coins, and totalValue.
+   */
+  resetGame: function () {
+    localStorage.removeItem("collection");
+    localStorage.removeItem("coins");
+    localStorage.removeItem("totalValue");
+    localStorage.removeItem("achievements");
+    localStorage.removeItem("packsOpened");
+    coins = 500;
+    totalValue = 0;
+    achievements = {};
+    packsOpened = 0;
+    coinsEl.textContent = coins;
+    totalValueEl.textContent = totalValue;
+    localStorage.setItem("coins", coins);
+    localStorage.setItem("totalValue", totalValue);
+    showToast && showToast("Game reset (cheat). Fresh start!");
+    updateOpenPackButtonState && updateOpenPackButtonState();
+    return "Game reset: collection, coins, and achievements cleared.";
+  },
+
+  /**
+   * List all available cheats.
+   */
+  help: function () {
+    const msg = [
+      "Available cheats:",
+      "cheats.infiniteMoney() - Set coins to Infinity (∞)",
+      "cheats.receiveAllCards() - Add all 151 cards (1 copy each) to your collection",
+      "cheats.resetGame() - Reset collection, coins, and totalValue for fresh testing",
+      "cheats.help() - Show this help message",
+    ].join("\n");
+    if (typeof console !== "undefined") console.log(msg);
+    return msg;
+  },
+};
+// === END CHEATS.JS ===
+
+// === DEV SHORTCUT: SHIFT+P opens cheats help in console ===
+// (Handled by cheats panel UI now: Shift+P reveals button, and debug logs are included above.)
