@@ -8,19 +8,43 @@
   </head>
   <body>
     <div class="game-container">
-      <h1>
-        Pokémon Pack<br />
-        Opening Game
-      </h1>
+      <h1>Pokémon Pack Opening Game</h1>
       <div class="stats">
         <p>💰 Coins: <span id="coins">500</span></p>
         <p>📈 Total Value: <span id="totalValue">0</span></p>
       </div>
-      <button id="openPackBtn">Open Pack (100 Coins)</button>
+      <div class="pack-buttons-container">
+        <button id="openPackBtn" class="pack-button">
+          Open Pack <br />(100 Coins)
+        </button>
+        <button id="openPremiumPackBtn" class="pack-button">
+          Open Premium Pack <br />(300 coins)
+        </button>
+        <button id="openUltraPackBtn" class="pack-button">
+          Open Ultra Pack <br />(600 coins)
+        </button>
+      </div>
+
+      <div class="pack-odds-container">
+        <h3>Pack Odds</h3>
+        <ul id="packOddsList">
+          <!-- Dynamically filled by script.js on pack hover/select -->
+        </ul>
+      </div>
+
+      <p
+        id="guaranteedSlotInfo"
+        style="display: none; font-size: 14px; color: #ffd700"
+      >
+        This pack guarantees a Rare or higher card in the last slot!
+      </p>
+
       <div class="pack-container" id="packContainer"></div>
-      <button id="viewCollectionBtn">View Collection</button>
-      <button id="viewAchievementsBtn">Achievements</button>
-      <button id="toggleCheatsBtn" class="cheats-btn">Cheats</button>
+      <div class="button-container">
+        <button id="viewCollectionBtn">View Collection</button>
+        <button id="viewAchievementsBtn">Achievements</button>
+        <button id="toggleCheatsBtn" class="cheats-btn">Cheats</button>
+      </div>
     </div>
 
     <div

@@ -1,3 +1,32 @@
+// === CONFIG + GLOBALS ===
+// --- Preparation for splitting: config.js, ui.js, packs.js, collection.js, achievements.js, cheats.js ---
+// Odds visualization and guaranteed rare+ slot features
+const packOddsList = document.getElementById("packOddsList");
+const guaranteedSlotInfo = document.getElementById("guaranteedSlotInfo");
+
+function updatePackOddsUI(packType) {
+  if (!packOddsList) return;
+  const odds = PACK_RARITY_ODDS[packType];
+  packOddsList.innerHTML = "";
+  for (const rarity in odds) {
+    const li = document.createElement("li");
+    li.textContent = `${rarity}: ${odds[rarity]}%`;
+    li.style.color =
+      rarity === "ultra-rare"
+        ? "gold"
+        : rarity === "rare"
+        ? "lightblue"
+        : rarity === "uncommon"
+        ? "lightgreen"
+        : "white";
+    packOddsList.appendChild(li);
+  }
+  if (packType === "premium" || packType === "ultra") {
+    guaranteedSlotInfo && (guaranteedSlotInfo.style.display = "block");
+  } else {
+    guaranteedSlotInfo && (guaranteedSlotInfo.style.display = "none");
+  }
+}
 // === CHEATS PANEL UI (Reliable, no fetch, hidden until Shift+P, click toggles panel) ===
 // === CHEATS PANEL UI (Reliable, no fetch, hidden until Shift+P, click toggles panel) ===
 // This block is run after DOMContentLoaded to avoid scope issues and ensure DOM is ready.
@@ -219,8 +248,272 @@ document.addEventListener("DOMContentLoaded", function () {
 const coinsEl = document.getElementById("coins");
 const totalValueEl = document.getElementById("totalValue");
 const packContainer = document.getElementById("packContainer");
+// --- Helper: Set pack container background class dynamically based on pack type ---
+function setPackContainerBackground(packType) {
+  if (!packContainer) return;
+  packContainer.classList.remove("standard-pack", "premium-pack", "ultra-pack");
+  if (packType === "standard") {
+    packContainer.classList.add("standard-pack");
+  } else if (packType === "premium") {
+    packContainer.classList.add("premium-pack");
+  } else if (packType === "ultra") {
+    packContainer.classList.add("ultra-pack");
+  }
+}
 const openPackBtn = document.getElementById("openPackBtn");
 const viewCollectionBtn = document.getElementById("viewCollectionBtn");
+const openPremiumPackBtn = document.getElementById("openPremiumPackBtn");
+const openUltraPackBtn = document.getElementById("openUltraPackBtn");
+
+// --- PACK TYPES ---
+const PACK_TYPES = {
+  standard: { cost: 100, name: "Standard Pack" },
+  premium: { cost: 300, name: "Premium Pack" },
+  ultra: { cost: 600, name: "Ultra Pack" },
+};
+
+// --- PACK RARITY ODDS ---
+// | Pack Type | Mythical | Legendary | Ultra-Rare | Rare | Uncommon | Common | Total |
+// |-----------|----------|-----------|------------|------|----------|--------|-------|
+// | Standard  | 0.1%     | 0.3%      | 1%         | 8.6% | 30%      | 60%    | 100%  |
+// | Premium   | 0.3%     | 0.7%      | 4%         | 15%  | 35%      | 45%    | 100%  |
+// | Ultra     | 0.5%     | 1%        | 8%         | 20%  | 35%      | 35%    | 100%  |
+const PACK_RARITY_ODDS = {
+  standard: {
+    mythical: 0.1,
+    legendary: 0.3,
+    "ultra-rare": 1,
+    rare: 8.6,
+    uncommon: 30,
+    common: 60,
+  },
+  premium: {
+    mythical: 0.3,
+    legendary: 0.7,
+    "ultra-rare": 4,
+    rare: 15,
+    uncommon: 35,
+    common: 45,
+  },
+  ultra: {
+    mythical: 0.5,
+    legendary: 1,
+    "ultra-rare": 8,
+    rare: 20,
+    uncommon: 35,
+    common: 35,
+  },
+};
+
+// --- PACK TILE RARITY ODDS ---
+const PACK_TILE_RARITY_ODDS = {
+  standard: [
+    /* tile 1 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 0,
+      uncommon: 25,
+      common: 75,
+    },
+    /* tile 2 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 0,
+      uncommon: 25,
+      common: 75,
+    },
+    /* tile 3 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 0,
+      uncommon: 25,
+      common: 75,
+    },
+    /* tile 4 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 0,
+      uncommon: 25,
+      common: 75,
+    },
+    /* tile 5 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 15,
+      uncommon: 35,
+      common: 50,
+    },
+    /* tile 6 */
+    {
+      mythical: 0,
+      legendary: 0,
+      "ultra-rare": 0,
+      rare: 15,
+      uncommon: 35,
+      common: 50,
+    },
+    /* tile 7 */
+    {
+      mythical: 0.1,
+      legendary: 1,
+      "ultra-rare": 5,
+      rare: 35,
+      uncommon: 25,
+      common: 35,
+    },
+    /* tile 8 */
+    {
+      mythical: 0.2,
+      legendary: 0.5,
+      "ultra-rare": 10,
+      rare: 15,
+      uncommon: 15,
+      common: 25,
+    },
+  ],
+  premium: [
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 1,
+      rare: 8,
+      uncommon: 30,
+      common: 60.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 1,
+      rare: 10,
+      uncommon: 30,
+      common: 58.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 2,
+      rare: 12,
+      uncommon: 30,
+      common: 55.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 2,
+      rare: 14,
+      uncommon: 30,
+      common: 53.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 2,
+      rare: 16,
+      uncommon: 30,
+      common: 51.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 3,
+      rare: 17,
+      uncommon: 30,
+      common: 49.7,
+    },
+    {
+      mythical: 0.1,
+      legendary: 0.2,
+      "ultra-rare": 4,
+      rare: 18,
+      uncommon: 30,
+      common: 47.7,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 5,
+      rare: 20,
+      uncommon: 28,
+      common: 46.4,
+    },
+  ],
+  ultra: [
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 2,
+      rare: 10,
+      uncommon: 28,
+      common: 59.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 3,
+      rare: 12,
+      uncommon: 28,
+      common: 56.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 4,
+      rare: 14,
+      uncommon: 28,
+      common: 53.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 5,
+      rare: 16,
+      uncommon: 28,
+      common: 50.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 6,
+      rare: 18,
+      uncommon: 28,
+      common: 47.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 7,
+      rare: 19,
+      uncommon: 28,
+      common: 45.4,
+    },
+    {
+      mythical: 0.2,
+      legendary: 0.4,
+      "ultra-rare": 8,
+      rare: 20,
+      uncommon: 28,
+      common: 43.4,
+    },
+    {
+      mythical: 0.3,
+      legendary: 0.5,
+      "ultra-rare": 10,
+      rare: 25,
+      uncommon: 25,
+      common: 39.2,
+    },
+  ],
+};
 
 // Coins initialization: only set to 500 if not present in localStorage
 let coins;
@@ -236,25 +529,18 @@ totalValueEl.textContent = totalValue;
 
 let cards = [];
 
-fetch("cards.json")
-  .then((response) => response.json())
-  .then((data) => {
-    cards = data;
+// --- Load typeColors and cards, assign color by type ---
+Promise.all([
+  fetch("typeColors.json").then((res) => res.json()),
+  fetch("cards.json").then((res) => res.json()),
+]).then(([typeColors, cardData]) => {
+  cards = cardData.map((card) => {
+    if (card.type && typeColors[card.type]) {
+      card.color = typeColors[card.type];
+    }
+    return card;
   });
-
-const rarityChances = {
-  "ultra-rare": 1,
-  rare: 9,
-  uncommon: 30,
-  common: 60,
-};
-
-const rarityGlow = {
-  "ultra-rare": "0 0 15px 5px gold",
-  rare: "0 0 10px 4px blue",
-  uncommon: "0 0 8px 3px green",
-  common: "0 0 5px 2px gray",
-};
+});
 
 // Achievement milestones
 const achievementMilestones = [
@@ -301,11 +587,11 @@ function showToast(message) {
   }, 3000);
 }
 
-function getRandomRarity() {
+function getRandomRarity(rarityTable) {
   const rand = Math.random() * 100;
   let sum = 0;
-  for (const rarity in rarityChances) {
-    sum += rarityChances[rarity];
+  for (const rarity in rarityTable) {
+    sum += rarityTable[rarity];
     if (rand <= sum) return rarity;
   }
   return "common";
@@ -329,24 +615,35 @@ function saveState() {
 // Adjust this constant for card reveal speed (ms between reveals)
 const CARD_REVEAL_DELAY = 150; // e.g. 100 = faster, 200 = slower
 
+/**
+ * Creates a card element with flip structure.
+ * - The card is initially shown with the backcover (via CSS).
+ * - Only after the reveal delay, the card receives the "show" class,
+ *   which triggers the CSS flip animation (rotateY) and reveals the front.
+ * - No "flip" class is forcibly added; flipping is controlled by "show" class only.
+ * - JS does not interfere with initial state; only the reveal timing.
+ */
 function createCardElement(card, delay) {
   const cardEl = document.createElement("div");
   cardEl.className = "card";
-  cardEl.style.boxShadow = rarityGlow[card.rarity];
+  cardEl.classList.add(card.rarity);
+  // Add per-card background color if specified in card JSON
+  if (card.color) {
+    cardEl.style.backgroundColor = card.color;
+  }
 
   // Flipping structure: .card > .card-inner > .card-front/.card-back
   const inner = document.createElement("div");
   inner.className = "card-inner";
 
-  // Card front (back of card shown before flip)
-  const front = document.createElement("div");
-  front.className = "card-front";
-  // Optionally, use a generic card back image or color
-  front.innerHTML = `<div class="card-back-design"></div>`;
+  // Card back (backcover) -- shown initially (CSS handles actual image)
+  const cardBack = document.createElement("div");
+  cardBack.className = "card-back";
+  cardBack.innerHTML = `<div class="card-back-design"></div>`;
 
-  // Card back (actual card content, revealed after flip)
-  const back = document.createElement("div");
-  back.className = "card-back";
+  // Card front (Pokémon) -- revealed after flip
+  const cardFront = document.createElement("div");
+  cardFront.className = "card-front";
 
   const name = document.createElement("div");
   name.className = "card-name";
@@ -367,21 +664,22 @@ function createCardElement(card, delay) {
   rarity.className = "card-rarity";
   rarity.textContent = `Rarity: ${card.rarity}`;
 
-  back.appendChild(name);
-  back.appendChild(image);
-  back.appendChild(description);
-  back.appendChild(rarity);
+  cardFront.appendChild(name);
+  cardFront.appendChild(image);
+  cardFront.appendChild(description);
+  cardFront.appendChild(rarity);
 
-  inner.appendChild(front);
-  inner.appendChild(back);
+  // Structure: .card-inner > .card-back (backcover), .card-front (pokemon)
+  inner.appendChild(cardBack);
+  inner.appendChild(cardFront);
   cardEl.appendChild(inner);
 
-  // Initially, no flip
-  cardEl.classList.remove("flip");
+  // Ensure card starts without "show" class (shows backcover only)
+  cardEl.classList.remove("show");
 
-  // Animate flip after delay
+  // Reveal (flip) card after delay by adding "show" class
   setTimeout(() => {
-    cardEl.classList.add("flip");
+    cardEl.classList.add("show");
   }, delay);
 
   return cardEl;
@@ -404,7 +702,16 @@ function checkMilestones(id, currentValue) {
   if (!ach) return;
   ach.milestones.forEach((milestone) => {
     if (currentValue === milestone) {
-      showToast(`Achievement unlocked: ${ach.label} - ${milestone}!`);
+      let reward = 0;
+      if (milestone <= 5) reward = 50;
+      else if (milestone <= 25) reward = 100;
+      else reward = 200;
+      coins += reward;
+      coinsEl.textContent = coins;
+      saveState();
+      showToast(
+        `🏆 Achievement unlocked: ${ach.label} - ${milestone}! +${reward} coins`
+      );
     }
   });
 }
@@ -432,18 +739,21 @@ function updateCollection(card) {
 
 function updateOpenPackButtonState() {
   // Final failsafe: disable if out of coins, enable if coins available
-  if (coins < 100) {
-    openPackBtn.disabled = true;
-    if (coins === 0) {
-      showToast("You are out of coins! Sell duplicates to earn more.");
-    }
-  } else {
-    openPackBtn.disabled = false;
+  openPackBtn.disabled = coins < PACK_TYPES.standard.cost;
+  const openPremiumPackBtn = document.getElementById("openPremiumPackBtn");
+  if (openPremiumPackBtn) {
+    openPremiumPackBtn.disabled = coins < PACK_TYPES.premium.cost;
+  }
+  if (coins === 0) {
+    showToast("You are out of coins! Sell duplicates to earn more.");
   }
 }
 
-openPackBtn.addEventListener("click", () => {
-  if (coins < 100) {
+// --- Pack opening logic (Reusable for standard/premium/ultra) ---
+function openPack(packType = "standard") {
+  setPackContainerBackground(packType);
+  const cost = PACK_TYPES[packType].cost;
+  if (coins < cost) {
     updateOpenPackButtonState();
     if (coins === 0) {
       showToast("You are out of coins! Sell duplicates to earn more.");
@@ -456,57 +766,51 @@ openPackBtn.addEventListener("click", () => {
     alert("Cards are still loading, please wait.");
     return;
   }
-
-  coins -= 100;
+  coins -= cost;
   coinsEl.textContent = coins;
   packContainer.innerHTML = "";
   let packValue = 0;
 
-  // Save original rarity chances for restoration
-  const originalRarityChances = {
-    "ultra-rare": rarityChances["ultra-rare"],
-    rare: rarityChances["rare"],
-    uncommon: rarityChances["uncommon"],
-    common: rarityChances["common"],
-  };
-
   for (let i = 0; i < 8; i++) {
-    // For the 8th card, temporarily boost rarity chances
-    if (i === 7) {
-      rarityChances["ultra-rare"] = 4;
-      rarityChances["rare"] = 21;
-      rarityChances["uncommon"] = 25;
-      rarityChances["common"] = 50;
-    }
-    const rarity = getRandomRarity();
-    // Log 8th card's rarity for easy testing
-    if (i === 7) {
-      console.log("[Pack Opening] 8th card rarity:", rarity);
-    }
+    let rarityTableForTile =
+      PACK_TILE_RARITY_ODDS[packType]?.[i] || PACK_RARITY_ODDS[packType];
+    let rarity = getRandomRarity(rarityTableForTile);
     const card = getRandomCardByRarity(rarity);
-    // Use adjustable reveal delay and flipping animation
     const cardEl = createCardElement(card, i * CARD_REVEAL_DELAY);
     updateCollection(card);
     packContainer.appendChild(cardEl);
     packValue += card.value || 0;
-    // Restore rarity chances after the 8th card
-    if (i === 7) {
-      rarityChances["ultra-rare"] = originalRarityChances["ultra-rare"];
-      rarityChances["rare"] = originalRarityChances["rare"];
-      rarityChances["uncommon"] = originalRarityChances["uncommon"];
-      rarityChances["common"] = originalRarityChances["common"];
-    }
   }
 
   totalValue += packValue;
   totalValueEl.textContent = totalValue;
-
   packsOpened++;
   updateAchievement("packsOpened", packsOpened);
 
   saveState();
   updateOpenPackButtonState();
-});
+}
+
+openPackBtn.addEventListener("click", () => openPack("standard"));
+if (openPremiumPackBtn) {
+  openPremiumPackBtn.addEventListener("click", () => openPack("premium"));
+}
+if (openUltraPackBtn) {
+  openUltraPackBtn.addEventListener("click", () => openPack("ultra"));
+}
+
+// === PACK BUTTON HOVER ODDS ===
+openPackBtn.addEventListener("mouseenter", () => updatePackOddsUI("standard"));
+if (openPremiumPackBtn) {
+  openPremiumPackBtn.addEventListener("mouseenter", () =>
+    updatePackOddsUI("premium")
+  );
+}
+if (openUltraPackBtn) {
+  openUltraPackBtn.addEventListener("mouseenter", () =>
+    updatePackOddsUI("ultra")
+  );
+}
 
 // Modal elements and functions for collection slide-in with progress and sell duplicates
 const collectionModal = document.createElement("div");
@@ -663,12 +967,12 @@ function closeCollectionModal() {
 let selectedCardsToSell = new Set();
 
 const raritySellValue = {
-  mythical: 500,
-  legendary: 250,
-  "ultra-rare": 100,
-  rare: 50,
-  uncommon: 20,
-  common: 5,
+  mythical: 1000,
+  legendary: 750,
+  "ultra-rare": 500,
+  rare: 200,
+  uncommon: 60,
+  common: 20,
 };
 
 function getSellValueForRarity(rarity) {
@@ -707,7 +1011,6 @@ function clearSelection() {
     .querySelectorAll(".collection-card.selected-for-sell")
     .forEach((el) => {
       el.classList.remove("selected-for-sell");
-      el.style.boxShadow = el.dataset.originalBoxShadow || "";
     });
 }
 
@@ -742,16 +1045,26 @@ function loadCollection() {
 
   keys.forEach((key) => {
     const card = collection[key];
+
+    // Enrich with color if available (always try, even if card.type is missing)
+    if (cards.length > 0) {
+      const foundCard = cards.find((c) => c.id === card.id);
+      if (foundCard && foundCard.color) {
+        card.color = foundCard.color;
+      }
+    }
     const cardEl = document.createElement("div");
     cardEl.className = "collection-card";
+    cardEl.classList.add(card.rarity);
+    if (card.color) {
+      cardEl.style.backgroundColor = card.color;
+    }
     cardEl.setAttribute("tabindex", "0");
     cardEl.dataset.cardId = card.id;
     cardEl.dataset.rarity = card.rarity;
     cardEl.dataset.count = card.count;
     cardEl.dataset.name = card.name;
     cardEl.dataset.sellValue = getSellValueForRarity(card.rarity);
-    cardEl.dataset.originalBoxShadow = rarityGlow[card.rarity] || "";
-    cardEl.style.boxShadow = rarityGlow[card.rarity] || "";
 
     const imageEl = document.createElement("div");
     imageEl.className = "collection-card-image";
@@ -786,12 +1099,9 @@ function loadCollection() {
         if (selectedCardsToSell.has(card.id)) {
           selectedCardsToSell.delete(card.id);
           cardEl.classList.remove("selected-for-sell");
-          cardEl.style.boxShadow = cardEl.dataset.originalBoxShadow || "";
         } else {
           selectedCardsToSell.add(card.id);
           cardEl.classList.add("selected-for-sell");
-          cardEl.style.boxShadow =
-            "0 0 18px 6px #ff9800, " + (cardEl.dataset.originalBoxShadow || "");
         }
         updateSelectedValueInfo();
       });
@@ -949,7 +1259,9 @@ sellAllBtn.addEventListener("click", () => {
   sellDuplicates("all");
 });
 
-viewCollectionBtn.addEventListener("click", openCollectionModal);
+if (viewCollectionBtn) {
+  viewCollectionBtn.addEventListener("click", openCollectionModal);
+}
 closeCollectionBtn.addEventListener("click", () => {
   clearSelection();
   closeCollectionModal();

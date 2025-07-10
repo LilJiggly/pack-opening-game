@@ -3,1057 +3,1208 @@
     "id": "001",
     "name": "Bulbasaur",
     "rarity": "common",
-    "value": 10,
-    "image": "images/001.png"
+    "value": 20,
+    "image": "images/001.png",
+    "type": "Grass"
   },
   {
     "id": "002",
     "name": "Ivysaur",
     "rarity": "common",
-    "value": 10,
-    "image": "images/002.png"
+    "value": 20,
+    "image": "images/002.png",
+    "type": "Grass"
   },
   {
     "id": "003",
     "name": "Venusaur",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/003.png"
+    "value": 200,
+    "image": "images/003.png",
+    "type": "Grass"
   },
   {
     "id": "004",
     "name": "Charmander",
     "rarity": "common",
-    "value": 10,
-    "image": "images/004.png"
+    "value": 20,
+    "image": "images/004.png",
+    "type": "Fire"
   },
   {
     "id": "005",
     "name": "Charmeleon",
     "rarity": "common",
-    "value": 10,
-    "image": "images/005.png"
+    "value": 20,
+    "image": "images/005.png",
+    "type": "Fire"
   },
   {
     "id": "006",
     "name": "Charizard",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/006.png"
+    "image": "images/006.png",
+    "type": "Fire"
   },
   {
     "id": "007",
     "name": "Squirtle",
     "rarity": "common",
-    "value": 10,
-    "image": "images/007.png"
+    "value": 20,
+    "image": "images/007.png",
+    "type": "Water"
   },
   {
     "id": "008",
     "name": "Wartortle",
     "rarity": "common",
-    "value": 10,
-    "image": "images/008.png"
+    "value": 20,
+    "image": "images/008.png",
+    "type": "Water"
   },
   {
     "id": "009",
     "name": "Blastoise",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/009.png"
+    "value": 200,
+    "image": "images/009.png",
+    "type": "Water"
   },
   {
     "id": "010",
     "name": "Caterpie",
     "rarity": "common",
-    "value": 10,
-    "image": "images/010.png"
+    "value": 20,
+    "image": "images/010.png",
+    "type": "Bug"
   },
   {
     "id": "011",
     "name": "Metapod",
     "rarity": "common",
-    "value": 10,
-    "image": "images/011.png"
+    "value": 20,
+    "image": "images/011.png",
+    "type": "Bug"
   },
   {
     "id": "012",
     "name": "Butterfree",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/012.png"
+    "value": 60,
+    "image": "images/012.png",
+    "type": "Bug"
   },
   {
     "id": "013",
     "name": "Weedle",
     "rarity": "common",
-    "value": 10,
-    "image": "images/013.png"
+    "value": 20,
+    "image": "images/013.png",
+    "type": "Bug"
   },
   {
     "id": "014",
     "name": "Kakuna",
     "rarity": "common",
-    "value": 10,
-    "image": "images/014.png"
+    "value": 20,
+    "image": "images/014.png",
+    "type": "Bug"
   },
   {
     "id": "015",
     "name": "Beedrill",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/015.png"
+    "value": 60,
+    "image": "images/015.png",
+    "type": "Bug"
   },
   {
     "id": "016",
     "name": "Pidgey",
     "rarity": "common",
-    "value": 10,
-    "image": "images/016.png"
+    "value": 20,
+    "image": "images/016.png",
+    "type": "Normal"
   },
   {
     "id": "017",
     "name": "Pidgeotto",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/017.png"
+    "value": 60,
+    "image": "images/017.png",
+    "type": "Normal"
   },
   {
     "id": "018",
     "name": "Pidgeot",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/018.png"
+    "value": 200,
+    "image": "images/018.png",
+    "type": "Normal"
   },
   {
     "id": "019",
     "name": "Rattata",
     "rarity": "common",
-    "value": 10,
-    "image": "images/019.png"
+    "value": 20,
+    "image": "images/019.png",
+    "type": "Normal"
   },
   {
     "id": "020",
     "name": "Raticate",
     "rarity": "common",
-    "value": 10,
-    "image": "images/020.png"
+    "value": 20,
+    "image": "images/020.png",
+    "type": "Normal"
   },
   {
     "id": "021",
     "name": "Spearow",
     "rarity": "common",
-    "value": 10,
-    "image": "images/021.png"
+    "value": 20,
+    "image": "images/021.png",
+    "type": "Normal"
   },
   {
     "id": "022",
     "name": "Fearow",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/022.png"
+    "value": 60,
+    "image": "images/022.png",
+    "type": "Normal"
   },
   {
     "id": "023",
     "name": "Ekans",
     "rarity": "common",
-    "value": 10,
-    "image": "images/023.png"
+    "value": 20,
+    "image": "images/023.png",
+    "type": "Poison"
   },
   {
     "id": "024",
     "name": "Arbok",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/024.png"
+    "value": 60,
+    "image": "images/024.png",
+    "type": "Poison"
   },
   {
     "id": "025",
     "name": "Pikachu",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/025.png"
+    "value": 60,
+    "image": "images/025.png",
+    "type": "Electric"
   },
   {
     "id": "026",
     "name": "Raichu",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/026.png"
+    "value": 200,
+    "image": "images/026.png",
+    "type": "Electric"
   },
   {
     "id": "027",
     "name": "Sandshrew",
     "rarity": "common",
-    "value": 10,
-    "image": "images/027.png"
+    "value": 20,
+    "image": "images/027.png",
+    "type": "Ground"
   },
   {
     "id": "028",
     "name": "Sandslash",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/028.png"
+    "value": 60,
+    "image": "images/028.png",
+    "type": "Ground"
   },
   {
     "id": "029",
     "name": "Nidoran♀",
     "rarity": "common",
-    "value": 10,
-    "image": "images/029.png"
+    "value": 20,
+    "image": "images/029.png",
+    "type": "Poison"
   },
   {
     "id": "030",
     "name": "Nidorina",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/030.png"
+    "value": 60,
+    "image": "images/030.png",
+    "type": "Poison"
   },
   {
     "id": "031",
     "name": "Nidoqueen",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/031.png"
+    "value": 200,
+    "image": "images/031.png",
+    "type": "Poison"
   },
   {
     "id": "032",
     "name": "Nidoran♂",
     "rarity": "common",
-    "value": 10,
-    "image": "images/032.png"
+    "value": 20,
+    "image": "images/032.png",
+    "type": "Poison"
   },
   {
     "id": "033",
     "name": "Nidorino",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/033.png"
+    "value": 60,
+    "image": "images/033.png",
+    "type": "Poison"
   },
   {
     "id": "034",
     "name": "Nidoking",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/034.png"
+    "value": 200,
+    "image": "images/034.png",
+    "type": "Poison"
   },
   {
     "id": "035",
     "name": "Clefairy",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/035.png"
+    "value": 60,
+    "image": "images/035.png",
+    "type": "Fairy"
   },
   {
     "id": "036",
     "name": "Clefable",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/036.png"
+    "value": 200,
+    "image": "images/036.png",
+    "type": "Fairy"
   },
   {
     "id": "037",
     "name": "Vulpix",
     "rarity": "common",
-    "value": 10,
-    "image": "images/037.png"
+    "value": 20,
+    "image": "images/037.png",
+    "type": "Fire"
   },
   {
     "id": "038",
     "name": "Ninetales",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/038.png"
+    "value": 200,
+    "image": "images/038.png",
+    "type": "Fire"
   },
   {
     "id": "039",
     "name": "Jigglypuff",
     "rarity": "common",
-    "value": 10,
-    "image": "images/039.png"
+    "value": 20,
+    "image": "images/039.png",
+    "type": "Fairy"
   },
   {
     "id": "040",
     "name": "Wigglytuff",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/040.png"
+    "value": 60,
+    "image": "images/040.png",
+    "type": "Fairy"
   },
   {
     "id": "041",
     "name": "Zubat",
     "rarity": "common",
-    "value": 10,
-    "image": "images/041.png"
+    "value": 20,
+    "image": "images/041.png",
+    "type": "Poison"
   },
   {
     "id": "042",
     "name": "Golbat",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/042.png"
+    "value": 60,
+    "image": "images/042.png",
+    "type": "Poison"
   },
   {
     "id": "043",
     "name": "Oddish",
     "rarity": "common",
-    "value": 10,
-    "image": "images/043.png"
+    "value": 20,
+    "image": "images/043.png",
+    "type": "Grass"
   },
   {
     "id": "044",
     "name": "Gloom",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/044.png"
+    "value": 60,
+    "image": "images/044.png",
+    "type": "Grass"
   },
   {
     "id": "045",
     "name": "Vileplume",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/045.png"
+    "value": 200,
+    "image": "images/045.png",
+    "type": "Grass"
   },
   {
     "id": "046",
     "name": "Paras",
     "rarity": "common",
-    "value": 10,
-    "image": "images/046.png"
+    "value": 20,
+    "image": "images/046.png",
+    "type": "Bug"
   },
   {
     "id": "047",
     "name": "Parasect",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/047.png"
+    "value": 60,
+    "image": "images/047.png",
+    "type": "Bug"
   },
   {
     "id": "048",
     "name": "Venonat",
     "rarity": "common",
-    "value": 10,
-    "image": "images/048.png"
+    "value": 20,
+    "image": "images/048.png",
+    "type": "Bug"
   },
   {
     "id": "049",
     "name": "Venomoth",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/049.png"
+    "value": 200,
+    "image": "images/049.png",
+    "type": "Bug"
   },
   {
     "id": "050",
     "name": "Diglett",
     "rarity": "common",
-    "value": 10,
-    "image": "images/050.png"
+    "value": 20,
+    "image": "images/050.png",
+    "type": "Ground"
   },
   {
     "id": "051",
     "name": "Dugtrio",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/051.png"
+    "value": 60,
+    "image": "images/051.png",
+    "type": "Ground"
   },
   {
     "id": "052",
     "name": "Meowth",
     "rarity": "common",
-    "value": 10,
-    "image": "images/052.png"
+    "value": 20,
+    "image": "images/052.png",
+    "type": "Normal"
   },
   {
     "id": "053",
     "name": "Persian",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/053.png"
+    "value": 60,
+    "image": "images/053.png",
+    "type": "Normal"
   },
   {
     "id": "054",
     "name": "Psyduck",
     "rarity": "common",
-    "value": 10,
-    "image": "images/054.png"
+    "value": 20,
+    "image": "images/054.png",
+    "type": "Water"
   },
   {
     "id": "055",
     "name": "Golduck",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/055.png"
+    "value": 200,
+    "image": "images/055.png",
+    "type": "Water"
   },
   {
     "id": "056",
     "name": "Mankey",
     "rarity": "common",
-    "value": 10,
-    "image": "images/056.png"
+    "value": 20,
+    "image": "images/056.png",
+    "type": "Fighting"
   },
   {
     "id": "057",
     "name": "Primeape",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/057.png"
+    "value": 60,
+    "image": "images/057.png",
+    "type": "Fighting"
   },
   {
     "id": "058",
     "name": "Growlithe",
     "rarity": "common",
-    "value": 10,
-    "image": "images/058.png"
+    "value": 20,
+    "image": "images/058.png",
+    "type": "Fire"
   },
   {
     "id": "059",
     "name": "Arcanine",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/059.png"
+    "value": 200,
+    "image": "images/059.png",
+    "type": "Fire"
   },
   {
     "id": "060",
     "name": "Poliwag",
     "rarity": "common",
-    "value": 10,
-    "image": "images/060.png"
+    "value": 20,
+    "image": "images/060.png",
+    "type": "Water"
   },
   {
     "id": "061",
     "name": "Poliwhirl",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/061.png"
+    "value": 60,
+    "image": "images/061.png",
+    "type": "Water"
   },
   {
     "id": "062",
     "name": "Poliwrath",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/062.png"
+    "value": 200,
+    "image": "images/062.png",
+    "type": "Water"
   },
   {
     "id": "063",
     "name": "Abra",
     "rarity": "common",
-    "value": 10,
-    "image": "images/063.png"
+    "value": 20,
+    "image": "images/063.png",
+    "type": "Psychic"
   },
   {
     "id": "064",
     "name": "Kadabra",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/064.png"
+    "value": 60,
+    "image": "images/064.png",
+    "type": "Psychic"
   },
   {
     "id": "065",
     "name": "Alakazam",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/065.png"
+    "image": "images/065.png",
+    "type": "Psychic"
   },
   {
     "id": "066",
     "name": "Machop",
     "rarity": "common",
-    "value": 10,
-    "image": "images/066.png"
+    "value": 20,
+    "image": "images/066.png",
+    "type": "Fighting"
   },
   {
     "id": "067",
     "name": "Machoke",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/067.png"
+    "value": 60,
+    "image": "images/067.png",
+    "type": "Fighting"
   },
   {
     "id": "068",
     "name": "Machamp",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/068.png"
+    "value": 200,
+    "image": "images/068.png",
+    "type": "Fighting"
   },
   {
     "id": "069",
     "name": "Bellsprout",
     "rarity": "common",
-    "value": 10,
-    "image": "images/069.png"
+    "value": 20,
+    "image": "images/069.png",
+    "type": "Grass"
   },
   {
     "id": "070",
     "name": "Weepinbell",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/070.png"
+    "value": 60,
+    "image": "images/070.png",
+    "type": "Grass"
   },
   {
     "id": "071",
     "name": "Victreebel",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/071.png"
+    "value": 200,
+    "image": "images/071.png",
+    "type": "Grass"
   },
   {
     "id": "072",
     "name": "Tentacool",
     "rarity": "common",
-    "value": 10,
-    "image": "images/072.png"
+    "value": 20,
+    "image": "images/072.png",
+    "type": "Water"
   },
   {
     "id": "073",
     "name": "Tentacruel",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/073.png"
+    "value": 200,
+    "image": "images/073.png",
+    "type": "Water"
   },
   {
     "id": "074",
     "name": "Geodude",
     "rarity": "common",
-    "value": 10,
-    "image": "images/074.png"
+    "value": 20,
+    "image": "images/074.png",
+    "type": "Rock"
   },
   {
     "id": "075",
     "name": "Graveler",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/075.png"
+    "value": 60,
+    "image": "images/075.png",
+    "type": "Rock"
   },
   {
     "id": "076",
     "name": "Golem",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/076.png"
+    "value": 200,
+    "image": "images/076.png",
+    "type": "Rock"
   },
   {
     "id": "077",
     "name": "Ponyta",
     "rarity": "common",
-    "value": 10,
-    "image": "images/077.png"
+    "value": 20,
+    "image": "images/077.png",
+    "type": "Fire"
   },
   {
     "id": "078",
     "name": "Rapidash",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/078.png"
+    "value": 60,
+    "image": "images/078.png",
+    "type": "Fire"
   },
   {
     "id": "079",
     "name": "Slowpoke",
     "rarity": "common",
-    "value": 10,
-    "image": "images/079.png"
+    "value": 20,
+    "image": "images/079.png",
+    "type": "Water"
   },
   {
     "id": "080",
     "name": "Slowbro",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/080.png"
+    "value": 200,
+    "image": "images/080.png",
+    "type": "Water"
   },
   {
     "id": "081",
     "name": "Magnemite",
     "rarity": "common",
-    "value": 10,
-    "image": "images/081.png"
+    "value": 20,
+    "image": "images/081.png",
+    "type": "Electric"
   },
   {
     "id": "082",
     "name": "Magneton",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/082.png"
+    "value": 200,
+    "image": "images/082.png",
+    "type": "Electric"
   },
   {
     "id": "083",
     "name": "Farfetch’d",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/083.png"
+    "value": 60,
+    "image": "images/083.png",
+    "type": "Normal"
   },
   {
     "id": "084",
     "name": "Doduo",
     "rarity": "common",
-    "value": 10,
-    "image": "images/084.png"
+    "value": 20,
+    "image": "images/084.png",
+    "type": "Normal"
   },
   {
     "id": "085",
     "name": "Dodrio",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/085.png"
+    "value": 60,
+    "image": "images/085.png",
+    "type": "Normal"
   },
   {
     "id": "086",
     "name": "Seel",
     "rarity": "common",
-    "value": 10,
-    "image": "images/086.png"
+    "value": 20,
+    "image": "images/086.png",
+    "type": "Water"
   },
   {
     "id": "087",
     "name": "Dewgong",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/087.png"
+    "value": 200,
+    "image": "images/087.png",
+    "type": "Water"
   },
   {
     "id": "088",
     "name": "Grimer",
     "rarity": "common",
-    "value": 10,
-    "image": "images/088.png"
+    "value": 20,
+    "image": "images/088.png",
+    "type": "Poison"
   },
   {
     "id": "089",
     "name": "Muk",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/089.png"
+    "value": 200,
+    "image": "images/089.png",
+    "type": "Poison"
   },
   {
     "id": "090",
     "name": "Shellder",
     "rarity": "common",
-    "value": 10,
-    "image": "images/090.png"
+    "value": 20,
+    "image": "images/090.png",
+    "type": "Water"
   },
   {
     "id": "091",
     "name": "Cloyster",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/091.png"
+    "value": 200,
+    "image": "images/091.png",
+    "type": "Water"
   },
   {
     "id": "092",
     "name": "Gastly",
     "rarity": "common",
-    "value": 10,
-    "image": "images/092.png"
+    "value": 20,
+    "image": "images/092.png",
+    "type": "Ghost"
   },
   {
     "id": "093",
     "name": "Haunter",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/093.png"
+    "value": 60,
+    "image": "images/093.png",
+    "type": "Ghost"
   },
   {
     "id": "094",
     "name": "Gengar",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/094.png"
+    "image": "images/094.png",
+    "type": "Ghost"
   },
   {
     "id": "095",
     "name": "Onix",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/095.png"
+    "value": 60,
+    "image": "images/095.png",
+    "type": "Rock"
   },
   {
     "id": "096",
     "name": "Drowzee",
     "rarity": "common",
-    "value": 10,
-    "image": "images/096.png"
+    "value": 20,
+    "image": "images/096.png",
+    "type": "Psychic"
   },
   {
     "id": "097",
     "name": "Hypno",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/097.png"
+    "value": 200,
+    "image": "images/097.png",
+    "type": "Fire"
   },
   {
     "id": "098",
     "name": "Krabby",
     "rarity": "common",
-    "value": 10,
-    "image": "images/098.png"
+    "value": 20,
+    "image": "images/098.png",
+    "type": "Water"
   },
   {
     "id": "099",
     "name": "Kingler",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/099.png"
+    "value": 60,
+    "image": "images/099.png",
+    "type": "Water"
   },
   {
     "id": "100",
     "name": "Voltorb",
     "rarity": "common",
-    "value": 10,
-    "image": "images/100.png"
+    "value": 20,
+    "image": "images/100.png",
+    "type": "Electric"
   },
   {
     "id": "101",
     "name": "Electrode",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/101.png"
+    "value": 60,
+    "image": "images/101.png",
+    "type": "Electric"
   },
   {
     "id": "102",
     "name": "Exeggcute",
     "rarity": "common",
-    "value": 10,
-    "image": "images/102.png"
+    "value": 20,
+    "image": "images/102.png",
+    "type": "Grass"
   },
   {
     "id": "103",
     "name": "Exeggutor",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/103.png"
+    "value": 200,
+    "image": "images/103.png",
+    "type": "Grass"
   },
   {
     "id": "104",
     "name": "Cubone",
     "rarity": "common",
-    "value": 10,
-    "image": "images/104.png"
+    "value": 20,
+    "image": "images/104.png",
+    "type": "Ground"
   },
   {
     "id": "105",
     "name": "Marowak",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/105.png"
+    "value": 60,
+    "image": "images/105.png",
+    "type": "Ground"
   },
   {
     "id": "106",
     "name": "Hitmonlee",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/106.png"
+    "value": 200,
+    "image": "images/106.png",
+    "type": "Fighting"
   },
   {
     "id": "107",
     "name": "Hitmonchan",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/107.png"
+    "value": 200,
+    "image": "images/107.png",
+    "type": "Fighting"
   },
   {
     "id": "108",
     "name": "Lickitung",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/108.png"
+    "value": 60,
+    "image": "images/108.png",
+    "type": "Normal"
   },
   {
     "id": "109",
     "name": "Koffing",
     "rarity": "common",
-    "value": 10,
-    "image": "images/109.png"
+    "value": 20,
+    "image": "images/109.png",
+    "type": "Poison"
   },
   {
     "id": "110",
     "name": "Weezing",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/110.png"
+    "value": 60,
+    "image": "images/110.png",
+    "type": "Poison"
   },
   {
     "id": "111",
     "name": "Rhyhorn",
     "rarity": "common",
-    "value": 10,
-    "image": "images/111.png"
+    "value": 20,
+    "image": "images/111.png",
+    "type": "Ground"
   },
   {
     "id": "112",
     "name": "Rhydon",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/112.png"
+    "value": 200,
+    "image": "images/112.png",
+    "type": "Ground"
   },
   {
     "id": "113",
     "name": "Chansey",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/113.png"
+    "image": "images/113.png",
+    "type": "Normal"
   },
   {
     "id": "114",
     "name": "Tangela",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/114.png"
+    "value": 60,
+    "image": "images/114.png",
+    "type": "Grass"
   },
   {
     "id": "115",
     "name": "Kangaskhan",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/115.png"
+    "value": 200,
+    "image": "images/115.png",
+    "type": "Normal"
   },
   {
     "id": "116",
     "name": "Horsea",
     "rarity": "common",
-    "value": 10,
-    "image": "images/116.png"
+    "value": 20,
+    "image": "images/116.png",
+    "type": "Water"
   },
   {
     "id": "117",
     "name": "Seadra",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/117.png"
+    "value": 60,
+    "image": "images/117.png",
+    "type": "Water"
   },
   {
     "id": "118",
     "name": "Goldeen",
     "rarity": "common",
-    "value": 10,
-    "image": "images/118.png"
+    "value": 20,
+    "image": "images/118.png",
+    "type": "Water"
   },
   {
     "id": "119",
     "name": "Seaking",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/119.png"
+    "value": 60,
+    "image": "images/119.png",
+    "type": "Water"
   },
   {
     "id": "120",
     "name": "Staryu",
     "rarity": "common",
-    "value": 10,
-    "image": "images/120.png"
+    "value": 20,
+    "image": "images/120.png",
+    "type": "Water"
   },
   {
     "id": "121",
     "name": "Starmie",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/121.png"
+    "value": 200,
+    "image": "images/121.png",
+    "type": "Water"
   },
   {
     "id": "122",
     "name": "Mr. Mime",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/122.png"
+    "value": 200,
+    "image": "images/122.png",
+    "type": "Psychic"
   },
   {
     "id": "123",
     "name": "Scyther",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/123.png"
+    "image": "images/123.png",
+    "type": "Bug"
   },
   {
     "id": "124",
     "name": "Jynx",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/124.png"
+    "value": 60,
+    "image": "images/124.png",
+    "type": "Ice"
   },
   {
     "id": "125",
     "name": "Electabuzz",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/125.png"
+    "value": 200,
+    "image": "images/125.png",
+    "type": "Electric"
   },
   {
     "id": "126",
     "name": "Magmar",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/126.png"
+    "value": 200,
+    "image": "images/126.png",
+    "type": "Fire"
   },
   {
     "id": "127",
     "name": "Pinsir",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/127.png"
+    "value": 60,
+    "image": "images/127.png",
+    "type": "Bug"
   },
   {
     "id": "128",
     "name": "Tauros",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/128.png"
+    "value": 200,
+    "image": "images/128.png",
+    "type": "Normal"
   },
   {
     "id": "129",
     "name": "Magikarp",
     "rarity": "common",
-    "value": 10,
-    "image": "images/129.png"
+    "value": 20,
+    "image": "images/129.png",
+    "type": "Water"
   },
   {
     "id": "130",
     "name": "Gyarados",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/130.png"
+    "image": "images/130.png",
+    "type": "Water"
   },
   {
     "id": "131",
     "name": "Lapras",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/131.png"
+    "image": "images/131.png",
+    "type": "Water"
   },
   {
     "id": "132",
     "name": "Ditto",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/132.png"
+    "value": 200,
+    "image": "images/132.png",
+    "type": "Normal"
   },
   {
     "id": "133",
     "name": "Eevee",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/133.png"
+    "value": 60,
+    "image": "images/133.png",
+    "type": "Normal"
   },
   {
     "id": "134",
     "name": "Vaporeon",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/134.png"
+    "value": 200,
+    "image": "images/134.png",
+    "type": "Water"
   },
   {
     "id": "135",
     "name": "Jolteon",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/135.png"
+    "value": 200,
+    "image": "images/135.png",
+    "type": "Electric"
   },
   {
     "id": "136",
     "name": "Flareon",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/136.png"
+    "value": 200,
+    "image": "images/136.png",
+    "type": "Fire"
   },
   {
     "id": "137",
     "name": "Porygon",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/137.png"
+    "value": 60,
+    "image": "images/137.png",
+    "type": "Normal"
   },
   {
     "id": "138",
     "name": "Omanyte",
     "rarity": "common",
-    "value": 10,
-    "image": "images/138.png"
+    "value": 20,
+    "image": "images/138.png",
+    "type": "Rock"
   },
   {
     "id": "139",
     "name": "Omastar",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/139.png"
+    "value": 60,
+    "image": "images/139.png",
+    "type": "Rock"
   },
   {
     "id": "140",
     "name": "Kabuto",
     "rarity": "common",
-    "value": 10,
-    "image": "images/140.png"
+    "value": 20,
+    "image": "images/140.png",
+    "type": "Rock"
   },
   {
     "id": "141",
     "name": "Kabutops",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/141.png"
+    "value": 60,
+    "image": "images/141.png",
+    "type": "Rock"
   },
   {
     "id": "142",
     "name": "Aerodactyl",
     "rarity": "rare",
-    "value": 100,
-    "image": "images/142.png"
+    "value": 200,
+    "image": "images/142.png",
+    "type": "Rock"
   },
   {
     "id": "143",
     "name": "Snorlax",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/143.png"
+    "image": "images/143.png",
+    "type": "Normal"
   },
   {
     "id": "144",
     "name": "Articuno",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/144.png"
+    "image": "images/144.png",
+    "type": "Ice"
   },
   {
     "id": "145",
     "name": "Zapdos",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/145.png"
+    "image": "images/145.png",
+    "type": "Electric"
   },
   {
     "id": "146",
     "name": "Moltres",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/146.png"
+    "image": "images/146.png",
+    "type": "Fire"
   },
   {
     "id": "147",
     "name": "Dratini",
     "rarity": "common",
-    "value": 10,
-    "image": "images/147.png"
+    "value": 20,
+    "image": "images/147.png",
+    "type": "Dragon"
   },
   {
     "id": "148",
     "name": "Dragonair",
     "rarity": "uncommon",
-    "value": 30,
-    "image": "images/148.png"
+    "value": 60,
+    "image": "images/148.png",
+    "type": "Dragon"
   },
   {
     "id": "149",
     "name": "Dragonite",
     "rarity": "ultra-rare",
     "value": 500,
-    "image": "images/149.png"
+    "image": "images/149.png",
+    "type": "Dragon"
   },
   {
     "id": "150",
     "name": "Mewtwo",
     "rarity": "legendary",
-    "value": 500,
-    "image": "images/150.png"
+    "value": 750,
+    "image": "images/150.png",
+    "type": "Psychic"
   },
   {
     "id": "151",
     "name": "Mew",
     "rarity": "mythical",
-    "value": 500,
-    "image": "images/151.png"
+    "value": 1000,
+    "image": "images/151.png",
+    "type": "Psychic"
   }
 ]
