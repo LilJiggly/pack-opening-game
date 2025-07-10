@@ -96,7 +96,7 @@ button:hover {
 
 #openPackBtn {
   background: red;
-  background-image: url(/images/129.png);
+  background-image: url(images/129.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -105,7 +105,7 @@ button:hover {
 
 #openPremiumPackBtn {
   background: blue;
-  background-image: url(/images/061.png);
+  background-image: url(images/061.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -115,7 +115,7 @@ button:hover {
 
 #openUltraPackBtn {
   background: goldenrod;
-  background-image: url(/images/149.png);
+  background-image: url(images/149.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
